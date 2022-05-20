@@ -1,4 +1,10 @@
 package com.sofkau.software.insurancecompany.insurance.services.values;
 
-public class IsAffiliated {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class IsAffiliated implements ValueObject<Boolean> {
+    @Override
+    public Boolean value() {
+        return null;
+    }
 }

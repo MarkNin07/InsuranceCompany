@@ -1,4 +1,6 @@
 package com.sofkau.software.insurancecompany.insurance.services.values;
 
-public class ServicesId {
+import co.com.sofka.domain.generic.Identity;
+
+public class ServicesId extends Identity {
 }

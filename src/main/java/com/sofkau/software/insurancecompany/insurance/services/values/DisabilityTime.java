@@ -1,4 +1,11 @@
 package com.sofkau.software.insurancecompany.insurance.services.values;
 
-public class DisabilityTime {
+import co.com.sofka.domain.generic.ValueObject;
+
+public class DisabilityTime implements ValueObject<Integer> {
+
+    @Override
+    public Integer value() {
+        return null;
+    }
 }

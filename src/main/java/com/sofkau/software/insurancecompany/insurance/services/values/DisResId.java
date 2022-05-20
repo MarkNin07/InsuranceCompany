@@ -1,4 +1,6 @@
 package com.sofkau.software.insurancecompany.insurance.services.values;
 
-public class DisResId {
+import co.com.sofka.domain.generic.Identity;
+
+public class DisResId extends Identity {
 }
