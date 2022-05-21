@@ -6,6 +6,8 @@ import com.sofkau.software.insurancecompany.insurance.services.values.DisResId;
 import com.sofkau.software.insurancecompany.insurance.services.values.IsDisabled;
 import com.sofkau.software.insurancecompany.insurance.services.values.Payments;
 
+import java.util.Objects;
+
 public class DisabilityReserve extends Entity<DisResId> {
 
 
@@ -18,11 +20,19 @@ public class DisabilityReserve extends Entity<DisResId> {
         this.payment = payment;
     }
 
-    public IsDisabled getIsDisabled() {
+    public void checkMedicalIncapacity(IsDisabled isDisabled){
+        this.isDisabled = Objects.requireNonNull(isDisabled);
+    }
+
+    public void sendPayment(Payments payment){
+        this.payment = Objects.requireNonNull(payment);
+    }
+
+    public IsDisabled isDisabled() {
         return isDisabled;
     }
 
-    public Payments getPayment() {
+    public Payments payment() {
         return payment;
     }
 }
