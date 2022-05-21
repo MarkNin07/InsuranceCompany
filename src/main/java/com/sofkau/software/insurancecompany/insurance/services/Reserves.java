@@ -7,6 +7,8 @@ import com.sofkau.software.insurancecompany.insurance.services.values.IsAffiliat
 import com.sofkau.software.insurancecompany.insurance.services.values.MedicalEvaluation;
 import com.sofkau.software.insurancecompany.insurance.services.values.ReservesId;
 
+import java.util.Objects;
+
 public class Reserves extends Entity<ReservesId> {
 
 
@@ -21,15 +23,31 @@ public class Reserves extends Entity<ReservesId> {
         this.disabilityTime = disabilityTime;
     }
 
-    public IsAffiliated getIsAffiliated() {
+    public void checkUserState(IsAffiliated isAffiliated){
+        this.isAffiliated = Objects.requireNonNull(isAffiliated);
+    }
+
+    public void checkMedicalEvaluation(MedicalEvaluation medicalEvaluation){
+        this.medicalEvaluation = Objects.requireNonNull(medicalEvaluation);
+    }
+
+    public void updateMedicalEvaluation(MedicalEvaluation medicalEvaluation){
+        this.medicalEvaluation = Objects.requireNonNull(medicalEvaluation);
+    }
+
+    public void updateDisabilityTime(DisabilityTime disabilityTime){
+        this.disabilityTime = Objects.requireNonNull(disabilityTime);
+    }
+
+    public IsAffiliated isAffiliated() {
         return isAffiliated;
     }
 
-    public MedicalEvaluation getMedicalEvaluation() {
+    public MedicalEvaluation medicalEvaluation() {
         return medicalEvaluation;
     }
 
-    public DisabilityTime getDisabilityTime() {
+    public DisabilityTime disabilityTime() {
         return disabilityTime;
     }
 }

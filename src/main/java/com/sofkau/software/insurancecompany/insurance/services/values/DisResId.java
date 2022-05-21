@@ -7,7 +7,7 @@ public class DisResId extends Identity {
     public DisResId() {
     }
 
-    public DisResId(String uuid) {
+    private DisResId(String uuid) {
         super(uuid);
     }
 
