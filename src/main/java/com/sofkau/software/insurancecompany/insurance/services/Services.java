@@ -17,9 +17,9 @@ public class Services extends AggregateEvent<ServicesId> {
     protected Set<DisabilityReserve> disabilityReserve;
 
 //This constructor sends changes to the eventLog to create our Service (ServiceCreated)
-    public Services(ServicesId entityId, Type type) {
-        super(entityId);
-        appendChange(new ServiceCreated(type)).apply();
+    public Services(ServicesId servicesId, Type type) {
+        super(servicesId);
+        appendChange(new ServiceCreated(servicesId, type)).apply();
     }
 
     private Services(ServicesId servicesId){
