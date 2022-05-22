@@ -14,5 +14,6 @@ public class AddReservesUseCase extends UseCase<RequestCommand<AddReserves>, Res
         var command = addReservesRequestCommand.getCommand();
         var services = Services.from(command.servicesId(), retrieveEvents(command.reservesId().value()));
         services.addReserves(command.reservesId(), command.isAffiliated(), command.medicalEvaluation(), command.disabilityTime());
+        emit().onResponse(new ResponseEvents(services.getUncommittedChanges()));
     }
 }

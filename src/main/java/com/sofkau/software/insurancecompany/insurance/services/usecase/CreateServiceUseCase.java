@@ -12,5 +12,6 @@ public class CreateServiceUseCase extends UseCase<RequestCommand<CreateService>,
     public void executeUseCase(RequestCommand<CreateService> createServiceRequestCommand) {
         var command = createServiceRequestCommand.getCommand();
         var services = new Services(command.servicesId(), command.type());
+        emit().onResponse(new ResponseEvents(services.getUncommittedChanges()));
     }
 }
