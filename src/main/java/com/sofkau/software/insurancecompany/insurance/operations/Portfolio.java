@@ -22,9 +22,6 @@ public class Portfolio extends Entity<PortfolioId> {
         super(portfolioId);
     }
 
-    public void checkBalance(BankAccount bankAccount){
-        this.bankAccount = Objects.requireNonNull(bankAccount);
-    }
 
     public void updatePortfolioEmail(Email email){
         this.email = Objects.requireNonNull(email);
