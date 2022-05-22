@@ -4,8 +4,6 @@ import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
 import com.sofkau.software.insurancecompany.insurance.operations.events.*;
 import com.sofkau.software.insurancecompany.insurance.operations.values.*;
-import com.sofkau.software.insurancecompany.insurance.services.events.PreventionLeaderUpdated;
-import com.sofkau.software.insurancecompany.insurance.services.events.ReservesAdded;
 import com.sofkau.software.insurancecompany.insurance.shared.Name;
 import com.sofkau.software.insurancecompany.insurance.shared.Type;
 
