@@ -1,31 +1,30 @@
 package com.sofkau.software.insurancecompany.insurance.services.commands;
 
-import co.com.sofka.domain.generic.Command;
 import com.sofkau.software.insurancecompany.insurance.services.values.DisResId;
 import com.sofkau.software.insurancecompany.insurance.services.values.IsDisabled;
-import com.sofkau.software.insurancecompany.insurance.services.values.ServicesId;
+import com.sofkau.software.insurancecompany.insurance.services.values.Payments;
 
-public class AddMedicalIncapacity extends Command {
+public class AddDisabilityReserve {
 
-    private final ServicesId servicesId;
     private final DisResId disResId;
     private final IsDisabled isDisabled;
+    private final Payments payments;
 
-    public AddMedicalIncapacity(ServicesId servicesId, DisResId disResId, IsDisabled isDisabled) {
-        this.servicesId = servicesId;
+    public AddDisabilityReserve(DisResId disResId, IsDisabled isDisabled, Payments payments) {
         this.disResId = disResId;
         this.isDisabled = isDisabled;
-    }
-
-    public ServicesId servicesId() {
-        return servicesId;
+        this.payments = payments;
     }
 
     public DisResId disResId() {
         return disResId;
     }
 
-    public IsDisabled isDisabled() {
+    public IsDisabled disabled() {
         return isDisabled;
+    }
+
+    public Payments payments() {
+        return payments;
     }
 }
