@@ -23,12 +23,12 @@ public class Reserves extends Entity<ReservesId> {
         this.disabilityTime = disabilityTime;
     }
 
-    public void checkUserState(IsAffiliated isAffiliated){
-        this.isAffiliated = Objects.requireNonNull(isAffiliated);
+    public Reserves(ReservesId reservesId){
+        super(reservesId);
     }
 
-    public void checkMedicalEvaluation(MedicalEvaluation medicalEvaluation){
-        this.medicalEvaluation = Objects.requireNonNull(medicalEvaluation);
+    public void checkUserState(IsAffiliated isAffiliated){
+        this.isAffiliated = Objects.requireNonNull(isAffiliated);
     }
 
     public void updateMedicalEvaluation(MedicalEvaluation medicalEvaluation){

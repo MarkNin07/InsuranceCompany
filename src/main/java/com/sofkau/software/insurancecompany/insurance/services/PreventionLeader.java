@@ -17,7 +17,11 @@ public class PreventionLeader extends Entity<LeaderId> {
         this.leaderName = leaderName;
     }
 
-    public void updateName(Name leaderName){
+    public PreventionLeader(LeaderId leaderId){
+        super(leaderId);
+    }
+
+    public void updatePreventionLeader(Name leaderName){
         this.leaderName = Objects.requireNonNull(leaderName);
     }
 

@@ -1,6 +1,7 @@
 package com.sofkau.software.insurancecompany.insurance.services.events;
 
 import co.com.sofka.domain.generic.DomainEvent;
+import com.sofkau.software.insurancecompany.insurance.services.PreventionLeader;
 import com.sofkau.software.insurancecompany.insurance.services.values.LeaderId;
 import com.sofkau.software.insurancecompany.insurance.services.values.ServicesId;
 import com.sofkau.software.insurancecompany.insurance.shared.Name;
@@ -19,15 +20,16 @@ public class PreventionLeaderAdded extends DomainEvent {
         this.leaderName = leaderName;
     }
 
+
     public ServicesId servicesId() {
         return servicesId;
     }
 
-    public LeaderId getLeaderId() {
+    public LeaderId leaderId() {
         return leaderId;
     }
 
-    public Name getLeaderName() {
+    public Name leaderName() {
         return leaderName;
     }
 }

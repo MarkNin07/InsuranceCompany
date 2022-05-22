@@ -20,7 +20,11 @@ public class DisabilityReserve extends Entity<DisResId> {
         this.payment = payment;
     }
 
-    public void checkMedicalIncapacity(IsDisabled isDisabled){
+    public DisabilityReserve(DisResId disResId){
+        super(disResId);
+    }
+
+    public void updateMedicalIncapacity(IsDisabled isDisabled){
         this.isDisabled = Objects.requireNonNull(isDisabled);
     }
 
