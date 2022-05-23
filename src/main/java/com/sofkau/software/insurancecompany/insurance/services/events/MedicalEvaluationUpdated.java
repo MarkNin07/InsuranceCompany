@@ -23,11 +23,11 @@ public class MedicalEvaluationUpdated extends DomainEvent {
         return servicesId;
     }
 
-    public ReservesId getReservesId() {
+    public ReservesId reservesId() {
         return reservesId;
     }
 
-    public MedicalEvaluation getMedicalEvaluation() {
+    public MedicalEvaluation medicalEvaluation() {
         return medicalEvaluation;
     }
 }

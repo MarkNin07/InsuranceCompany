@@ -31,8 +31,8 @@ public class UpdateServices extends EventChange {
         });
 
         apply((MedicalEvaluationUpdated event) -> {
-            var reserve = new Reserves(event.getReservesId());
-            reserve.updateMedicalEvaluation(event.getMedicalEvaluation());
+            var reserve = new Reserves(event.reservesId());
+            reserve.updateMedicalEvaluation(event.medicalEvaluation());
         });
 
         apply((PaymentSent event) -> {

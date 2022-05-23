@@ -12,7 +12,7 @@ public class UpdateMedicalEvaluationUseCase extends UseCase<RequestCommand<Updat
     @Override
     public void executeUseCase(RequestCommand<UpdateMedicalEvaluation> updateMedicalEvaluationRequestCommand) {
         var command = updateMedicalEvaluationRequestCommand.getCommand();
-        var services = Services.from(command.servicesId(), retrieveEvents(command.servicesId().value()));
+        var services = Services.from(command.servicesId(), this.retrieveEvents());
         services.updateMedicalEvaluation(command.servicesId(), command.reservesId(), command.medicalEvaluation());
         emit().onResponse(new ResponseEvents(services.getUncommittedChanges()));
 
