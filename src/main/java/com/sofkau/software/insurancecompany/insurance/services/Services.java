@@ -9,6 +9,7 @@ import com.sofkau.software.insurancecompany.insurance.shared.Type;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 
 public class Services extends AggregateEvent<ServicesId> {
@@ -96,6 +97,9 @@ public class Services extends AggregateEvent<ServicesId> {
     }
 
 
+    public Optional<DisabilityReserve> findDisabilityReserveById(DisResId disResId){
+        return disabilityReserve().stream().filter((disResv) -> disResv.identity().equals(disResId)).findFirst();
+    }
 
 
     //getters

@@ -4,7 +4,7 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class Payments implements ValueObject<Long> {
+public class Payments implements ValueObject<String> {
 
 
     private final String value;
@@ -17,8 +17,8 @@ public class Payments implements ValueObject<Long> {
     }
 
     @Override
-    public Long value() {
-        return null;
+    public String value() {
+        return value;
     }
 
     @Override
