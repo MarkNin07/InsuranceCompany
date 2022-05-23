@@ -12,7 +12,7 @@ public class AddReservesUseCase extends UseCase<RequestCommand<AddReserves>, Res
     @Override
     public void executeUseCase(RequestCommand<AddReserves> addReservesRequestCommand) {
         var command = addReservesRequestCommand.getCommand();
-        var services = Services.from(command.servicesId(), retrieveEvents(command.reservesId().value()));
+        var services = Services.from(command.servicesId(), this.retrieveEvents());
         services.addReserves(command.reservesId(), command.isAffiliated(), command.medicalEvaluation(), command.disabilityTime());
         emit().onResponse(new ResponseEvents(services.getUncommittedChanges()));
     }
