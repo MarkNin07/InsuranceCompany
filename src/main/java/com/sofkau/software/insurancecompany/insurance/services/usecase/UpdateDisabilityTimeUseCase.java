@@ -14,7 +14,6 @@ public class UpdateDisabilityTimeUseCase extends UseCase<TriggeredEvent<Disabili
         var event = disabilityTimeUpdatedTriggeredEvent.getDomainEvent();
         var services = Services.from(event.servicesId(), this.retrieveEvents());
         services.sendPayment(event.servicesId(), DisResId.of("123"), new Payments("1000"));
-        //System.out.println(services.findDisabilityReserveById(123));
         emit().onResponse(new ResponseEvents(services.getUncommittedChanges()));
     }
 }
